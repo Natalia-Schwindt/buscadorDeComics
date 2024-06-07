@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de Comics</title>
+    <script
+      src="https://kit.fontawesome.com/bdec5d58ea.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
     <header>
@@ -12,6 +16,40 @@
             <img src="/assets/img/banner.png" alt="Banner">
         </figure>
     </header>
+    <main>
+      <h3>Búsqueda</h3>
+      <form action="">
+        <input type="search">
+        <label for="tipo">Tipo</label>
+        <select name="tipo" id="orden">
+          <option value="">Comics</option>
+          <option value="">Personajes</option>
+        </select>
+        <label for="orden">Orden</label>
+        <select name="orden" id="orden">
+          <option value="">A-Z</option>
+          <option value="">Z-A</option>
+          <option value="">Más nuevos</option>
+          <option value="">Más viejos</option>
+        </select>
+        <button>Buscar</button>
+      </form>
+        <h3>Resultados</h3>
+        <p class="resultados"><span id="resultados"></span></p>
+        <div id="root"></div>
+  
+        <div class="container-paginador">
+          <p>Pagina actual: <span id="pagina-actual"></span></p>
+          <p>Total de páginas: <span id="total-paginas"></span></p>
+  
+          <div class="pagination">
+            <button id="first-page"><i class="fa-solid fa-angles-left"></i></button>
+            <button id="prev-page"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next-page"><i class="fa-solid fa-angle-right"></i></button>
+            <button id="last-page"><i class="fa-solid fa-angles-right"></i></button>
+          </div>
+        </div>
+      </main>
     <footer>
         <p>&copy; Trabajo realizado por Natalia Schwindt</p>
     </footer>
