@@ -8,36 +8,57 @@
       src="https://kit.fontawesome.com/bdec5d58ea.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
-        <h1>ADA COMICS</h1>
+        <h1 class="flex justify-center">ADA COMICS</h1>
         <figure>
-            <img src="/assets/img/banner.png" alt="Banner">
+            <img src="/assets/img/banner.png" alt="Banner" class="w-full">
         </figure>
     </header>
     <main>
-      <h3>Búsqueda</h3>
-      <form action="">
-        <input type="search">
+      <section class="flex justify-center">
+
+        <h2>Búsqueda</h2>
+
+        <input type="search" id="search">
         <label for="tipo">Tipo</label>
-        <select name="tipo" id="orden">
-          <option value="">Comics</option>
-          <option value="">Personajes</option>
+
+        <select name="tipo" id="tipo">
+          <option value="comics">Comics</option>
+          <option value="personajes">Personajes</option>
         </select>
+
         <label for="orden">Orden</label>
+
         <select name="orden" id="orden">
-          <option value="">A-Z</option>
-          <option value="">Z-A</option>
-          <option value="">Más nuevos</option>
-          <option value="">Más viejos</option>
+          <option value="az">A-Z</option>
+          <option value="za">Z-A</option>
+          <option value="masnuevos">Más nuevos</option>
+          <option value="masviejos">Más viejos</option>
+          <option value="fechaDePublicacion">Fecha de publicación</option>
+          <option value="fechaDePublicacionInversa">Fecha de publicación inversa</option>
+          <option value="fechaDeVenta">Fecha de venta</option>
+          <option value="fechaDeVentaInversa">Fecha de venta inversa</option>
+          <option value="titulo">Título A-Z</option>
+          <option value="tituloInversa">Título Z-A</option>
+          <option value="numeroDeEmision">Número de emisión</option>
+          <option value="numeroDeEmisionInversa">Número de emisión inverso</option>
         </select>
+
         <button>Buscar</button>
-      </form>
-        <h3>Resultados</h3>
-        <p class="resultados"><span id="resultados"></span></p>
+
+      </section>
+
+      <section class="flex justify-center">
+        <h2>Resultados</h2>
+        <p class="resultados">Total de resultados: <span id="resultados"></span></p>
         <div id="root"></div>
-  
+      </section>
+
+      <section class="flex justify-center container-paginador">
+
         <div class="container-paginador">
           <p>Pagina actual: <span id="pagina-actual"></span></p>
           <p>Total de páginas: <span id="total-paginas"></span></p>
@@ -49,7 +70,11 @@
             <button id="last-page"><i class="fa-solid fa-angles-right"></i></button>
           </div>
         </div>
+
+      </section>
       </main>
+      <script src="./env.js"></script>
+      <script src="./index.js"></script>
     <footer>
         <p>&copy; Trabajo realizado por Natalia Schwindt</p>
     </footer>
