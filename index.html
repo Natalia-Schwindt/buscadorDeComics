@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Comics</title>
-    <script
-      src="https://kit.fontawesome.com/bdec5d58ea.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Buscador de Comics y Personajes</title>
+    <script src="https://kit.fontawesome.com/bdec5d58ea.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -18,63 +15,53 @@
         </figure>
     </header>
     <main>
-      <section class="flex justify-center">
-
-        <h2>Búsqueda</h2>
-
-        <input type="search" id="search">
-        <label for="tipo">Tipo</label>
-
-        <select name="tipo" id="tipo">
-          <option value="comics">Comics</option>
-          <option value="personajes">Personajes</option>
-        </select>
-
-        <label for="orden">Orden</label>
-
-        <select name="orden" id="orden">
-          <option value="az">A-Z</option>
-          <option value="za">Z-A</option>
-          <option value="masnuevos">Más nuevos</option>
-          <option value="masviejos">Más viejos</option>
-          <option value="fechaDePublicacion">Fecha de publicación</option>
-          <option value="fechaDePublicacionInversa">Fecha de publicación inversa</option>
-          <option value="fechaDeVenta">Fecha de venta</option>
-          <option value="fechaDeVentaInversa">Fecha de venta inversa</option>
-          <option value="titulo">Título A-Z</option>
-          <option value="tituloInversa">Título Z-A</option>
-          <option value="numeroDeEmision">Número de emisión</option>
-          <option value="numeroDeEmisionInversa">Número de emisión inverso</option>
-        </select>
-
-        <button>Buscar</button>
-
-      </section>
-
-      <section class="flex justify-center">
-        <h2>Resultados</h2>
-        <p class="resultados">Total de resultados: <span id="resultados"></span></p>
-        <div id="root"></div>
-      </section>
-
-      <section class="flex justify-center container-paginador">
-
-        <div class="container-paginador">
-          <p>Pagina actual: <span id="pagina-actual"></span></p>
-          <p>Total de páginas: <span id="total-paginas"></span></p>
-  
-          <div class="pagination">
-            <button id="first-page"><i class="fa-solid fa-angles-left"></i></button>
-            <button id="prev-page"><i class="fa-solid fa-angle-left"></i></button>
-            <button id="next-page"><i class="fa-solid fa-angle-right"></i></button>
-            <button id="last-page"><i class="fa-solid fa-angles-right"></i></button>
+        <section class="flex justify-center">
+            <h2>Búsqueda</h2>
+            <input type="search" id="search" placeholder="Buscar por nombre o título">
+            <label for="tipo">Tipo</label>
+            <select name="tipo" id="tipo">
+                <option value="comics">Comics</option>
+                <option value="personajes">Personajes</option>
+            </select>
+            <label for="orden">Orden</label>
+            <select name="orden" id="orden">
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="masnuevos">Más nuevos</option>
+                <option value="masviejos">Más viejos</option>
+            </select>
+            <button>Buscar</button>
+        </section>
+        <section class="flex justify-center">
+            <h2>Resultados</h2>
+            <p class="resultados">Total de resultados: <span id="resultados"></span></p>
+            <div id="root"></div>
+        </section>
+        <section class="flex justify-center container-paginador">
+          <div class="container-paginador">
+              <p>Pagina actual: <span id="pagina-actual"></span></p>
+              <p>Total de páginas: <span id="total-paginas"></span></p>
+              <div class="pagination">
+                  <button id="first-page" class="bg-blue-500 text-white px-2 py-1 rounded disabled:bg-blue-300 disabled:opacity-50">
+                      <i class="fa-solid fa-angles-left"></i>
+                  </button>
+                  <button id="prev-page" class="bg-blue-500 text-white px-2 py-1 rounded disabled:bg-blue-300 disabled:opacity-50">
+                      <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button id="next-page" class="bg-blue-500 text-white px-2 py-1 rounded disabled:bg-blue-300 disabled:opacity-50">
+                      <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                  <button id="last-page" class="bg-blue-500 text-white px-2 py-1 rounded disabled:bg-blue-300 disabled:opacity-50">
+                      <i class="fa-solid fa-angles-right"></i>
+                  </button>
+              </div>
           </div>
-        </div>
-
       </section>
-      </main>
-      <script src="./env.js"></script>
-      <script src="./index.js"></script>
+      
+      
+    </main>
+    <script src="./env.js"></script>
+    <script src="./index.js"></script>
     <footer>
         <p>&copy; Trabajo realizado por Natalia Schwindt</p>
     </footer>
